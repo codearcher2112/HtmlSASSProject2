@@ -1,0 +1,115 @@
+/* ----- Aside ----- */
+aside {
+  float: right;
+  width: 23%;
+}
+
+/* Popular Posts Styles Start */
+.popularPostList {
+  padding: 20px;
+  &>li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid $project-main-brown;
+    a {
+      font-family: $Font-Bold;
+      font-size: 16px;
+      color: $project-main;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  ul {
+    @include afterClearfix;
+    padding: 12px 0;
+    li {
+      float: left;
+      width: 33.3%;
+      padding: 0 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-family: $Font-SemiBold;
+      font-size: 15px;
+      &:first-child  {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    span {
+      vertical-align: text-bottom;
+      font-size: 18px;
+    }
+  }
+}
+/* Popular Posts Styles End */
+
+/* SocialAside Styles Start */
+.socialAside {
+  margin-bottom: 35px;
+  padding: 30px 0 0;
+  li {
+    float: left;
+    width: 50%;
+    margin-bottom: 40px;
+    text-align: center;
+    span[class^="icon"] {
+      display: block;
+      width: 61px;
+      height: 61px;
+      margin: 0 auto;
+      line-height: 61px;
+      background: $project-main;
+      @include radius(100%);
+      text-align: center;
+      color: $white;
+      vertical-align: text-bottom;
+      font-size: 24px;
+    }
+
+    p {
+      padding-top: 10px;
+      font-family: $Font-Regular;
+      font-size: 16px;
+      span {
+        font-family: $Font-Bold;
+        font-size: 24px;
+      }
+    }
+  }
+}
+/* SocialAside Styles End */
+
+/* Popular Tags Styles Start */
+.popularTags {
+  margin-bottom: 35px;
+  ul {
+    padding: 35px;
+  }
+}
+/* Popular Tags Styles End */
+
+/* Partners Styles Start */
+.partners {
+  ul, li {
+    padding: 4px 0;
+  }
+  a {
+    display: inline-block;
+    margin: 0 auto;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}

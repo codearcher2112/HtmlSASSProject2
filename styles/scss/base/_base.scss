@@ -1,0 +1,11 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  @include bg-img($img: "bg.png", $bg_color: null, $repeat: no-repeat, $position: bottom, $bg_size: cover);
+  font-family: $Font-Light;
+  font-size: 18px;
+  color: $project-main;
+}

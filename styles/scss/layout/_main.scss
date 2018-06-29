@@ -1,0 +1,344 @@
+/* ----- Article ----- */
+.mainSection {
+  float: left;
+  width: 74%;
+  margin-right: 3%;
+  padding: 0 36px 0 50px;
+  article {
+    line-height: 30px;
+  }
+}
+
+/* Main Blog Body Styles Start */
+.realWedding {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 3px 11px;
+  background: $project-lighter-brown;
+  line-height: 1;
+  font-family: $Font-Bold;
+  font-size: 14px;
+}
+
+.blogpostDate {
+  display: block;
+  margin: 30px 0 20px;
+  font-family: $Font-SemiBold-It;
+  font-size: 14px;
+  color: $project-main-brown;
+}
+
+.preface {
+  margin-bottom: 40px;
+  font-family: $Font-Italic;
+}
+
+.blogpostImg {
+  display: block;
+  width: 100%;
+  margin: 50px 0 15px;
+}
+
+.blogpostImgTitle {
+  display: inline-block;
+  margin-bottom: 45px;
+  font-family: $Font-SemiBold;
+  font-size: 16px;
+}
+/* Main Blog Body Styles End */
+
+/* Get It Yourself Styles Start */
+.getitImgHolder {
+  padding: 40px 0 50px;
+  li {
+    padding: 0 5px;
+    width: 33.3%;
+  }
+  a {
+    position: relative;
+    display: block;
+    max-width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include radius(100%);
+    color: $project-main;
+    &:hover .overlay {
+      opacity: 1;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+  }
+  .overlay {
+    @include centerer($horizontal: true, $vertical: true);
+    display: block;
+    width: 100%;
+    padding: 12px 2px;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $Font-SemiBold;
+    font-size: 16px;
+    @include transition(0.3s);
+  }
+}
+/* Get It Yourself Styles End */
+
+/* Tag Section Styles Start */
+.tags {
+  padding-top: 12px;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+
+  a {
+    border-bottom: 1px solid $project-dark-brown;
+    font-family: $Font-Regular;
+    font-size: 16px;
+    color: $project-dark-brown;
+    &:hover {
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
+/* Tag Section Styles End */
+
+/* Social-Statistics Section Styles Start */
+.socialStatistics {
+  margin: 30px 0 50px;
+  padding: 15px 0;
+  border-top: 1px solid $project-main-brown;
+  border-bottom: 1px solid $project-main-brown;
+  li {
+    display: inline-block;
+  }
+}
+
+.social {
+  li {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  a {
+    display: block;
+    color: $project-main;
+  }
+}
+
+.socialHeart {
+  &:hover {
+    color: #ff5182;
+  }
+}
+
+.socialPintrest {
+  &:hover {
+    color: #BD081C;
+  }
+}
+
+.socialFacebook {
+  &:hover {
+    color: #8b9dc3;
+  }
+}
+
+.socialTwitter {
+  &:hover {
+    color:#1dcaff;
+  }
+}
+
+.statistics {
+  li {
+    padding: 0 25px;
+    word-spacing: 2px;
+    font-family: $Font-SemiBold;
+    font-size: 16px;
+    &:last-child {
+      padding: 0;
+    }
+    span {
+      vertical-align: text-bottom;
+      font-size: 21px;
+    }
+  }
+}
+/* Social-Statistics Section Styles End */
+
+/* Blogger Comments Section Styles Start */
+.bloggerComments {
+  margin: 40px 0;
+  position: relative;
+  &::after {
+    @include pos-abs($top: null, $right: null, $bottom: -60px, $left: null);
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid $project-main-brown;
+    z-index: -1;
+  }
+  li {
+    margin-top: 40px;
+  }
+  .bloggerImgHolder {
+    width: 51px;
+    height: 51px;
+    @include radius(100%);
+  }
+  a {
+    @include radius(100%);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    @include radius(100%);
+  }
+}
+
+.bloggerName {
+  font-family: $Font-Bold;
+  font-size: 20px;
+  color: $project-main;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.bloggerInfo {
+  padding-top: 2px;
+  font-family: $Font-SemiBold;
+  font-size: 16px;
+  color: $project-main-brown;
+}
+
+.postDate {
+  display: block;
+  font-family: $Font-Bold;
+  font-size: 14px;
+  color: $project-main;
+}
+
+.bloggerPost {
+  padding-top: 20px;
+  line-height: 30px;
+  font-family: $Font-Regular;
+  font-size: 16px;
+  color: $project-main;
+}
+/* Blogger Comments Section Styles End */
+
+/* Add Comment Form Styles Start */
+.addComment {
+  padding: 85px 0 45px;
+}
+
+.formCell {
+  width: 48%;
+  &:nth-child(2) {
+    margin-left: 4%;
+  }
+}
+/* Add Comment Form Styles End */
+
+/* Blog Cards Section Styles Start */
+.blogCardHolder {
+  margin-left: -45px;
+}
+
+.blogCardList>li {
+  width: 48%;
+  background: $white;
+}
+
+.blogCardBanner {
+  position: relative;
+  display: block;
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.blogCardTitle {
+  @include pos-abs($top: 20px, $right: null, $bottom: null, $left: null);
+  display: inline-block;
+  width: 220px;
+  padding: 15px 5px 15px 15px;
+  background: $project-main;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: $Font-Otama;
+  font-size: 20px;
+  color: $white;
+}
+
+.blogCardContent {
+  padding: 20px 15px 25px 15px;
+  background: $white;
+  .realWedding {
+    margin-top: 0;
+    padding: 3px 11px;
+    font-size: 13px;
+  }
+  .blogpostDate {
+    margin: 20px 0;
+    color: $project-main;
+  }
+  .blogCardTxt {
+    line-height: 30px;
+    font-family: $Font-Regular;
+    font-size: 16px;
+  }
+}
+
+.blogCardFooter {
+
+  padding-top: 25px;
+  a {
+    display: block;
+    padding: 5px 18px;
+    border: 2px solid $project-dark-brown;
+    font-family: $Font-Bold;
+    font-size: 16px;
+    color: $project-main;
+    &:hover {
+      background: $project-dark-brown;
+      color: $white;
+    }
+  }
+  ul {
+    width: 60%;
+    padding: 5px 0;
+  }
+  li {
+    padding: 0 5px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: $Font-SemiBold;
+    font-size: 16px;
+  }
+  span {
+    vertical-align: text-bottom;
+    font-size: 21px;
+  }
+}
+/* Blog Cards Section Styles End */

@@ -1,0 +1,58 @@
+.burgerMenu {
+    background: transparent;
+    line-height: 1.2;
+    font-family: $Font-Bold;
+    font-size: 14px;
+    color: $project-main;
+    span {
+      display: inline-block;
+      margin-top: -2px;
+      margin-right: 10px;
+      vertical-align: middle;
+      line-height: 1.2;
+      font-size: 36px;
+      color: $project-main-brown;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+}
+
+.mainBtn {
+  display: inline-block;
+  border: 2px solid transparent;
+  background: $project-main;
+  font-family: "SourceSansPro-Bold", sans-serif;
+  font-size: 14px;
+  color: $white;
+  &:hover {
+    background: transparent;
+    border: 2px solid $project-main;
+    color: $project-main;
+  }
+}
+
+.bigBtn {
+  padding: 9px 36px;
+  @include radius(5px);
+}
+
+.postitBtn {
+  padding: 9px 22px;
+  @include radius(15px);
+  @include boxShadow(0px 5px 15px 0px rgba(0, 0, 0, 0.5));
+}
+
+.moreComments {
+  display: block;
+  margin: 0 auto;
+  padding: 9px 14px;
+  background: $white;
+  border: 1px solid $project-main-brown;
+  font-family: $Font-Bold;
+  font-size: 12px;
+  &:hover {
+    background: $project-main-brown;
+    color: $white;
+  }
+}

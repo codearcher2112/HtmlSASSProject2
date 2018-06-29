@@ -1,0 +1,56 @@
+/* Add Comment Form Styles */
+.formMain {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid $project-main-brown;
+  @include radius(15px);
+  opacity: 0.5;
+  font-family: $Font-SemiBold;
+  font-size: 14px;
+  @include placeholder-styles($font_family: $Font-SemiBold, $color: $project-main, $font_size: 14px, $font_weight: null, $font_style: null);
+}
+
+.addComment {
+  textarea {
+    min-height: 128px;
+  }
+}
+
+/* Aside Search Form Styles */
+.asideSearch {
+  width: 100%;
+  padding: 15px 55px 15px 20px;
+  background: $project-lighter-brown;
+  text-overflow: ellipsis;
+  font-family: $Font-Regular;
+  font-size: 16px;
+  color: #22284f;
+  @include placeholder-styles($font_family: $Font-Regular, $color: #22284f, $font_size: 16px, $font_weight: null, $font_style: null);
+}
+
+.submitBtnHolder {
+  @include pos-abs($top: 0, $right: 0, $bottom: null, $left: null);
+  width: 50px;
+  min-height: 50px;
+  span {
+    @include pos-abs($top: 0, $right: 0, $bottom: null, $left: null);
+    display: block;
+    width: 100%;
+    font-size: 25px;
+    line-height: 2;
+    text-align: center;
+  }
+}
+
+.searchBtn {
+  @include pos-abs($top: 0, $right: 0, $bottom: null, $left: null);
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 100;
+  &:hover {
+    color: $white;
+  }
+}

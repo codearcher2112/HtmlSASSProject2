@@ -1,0 +1,14 @@
+/* ----- Section and Sections Generals -----*/
+.main {
+  padding-top: 70px;
+  padding-bottom: 45px;
+}
+.cardShadow {
+  @include boxShadow(0px 1px 5px 0px rgba(0, 0, 0, 0.3));
+}
+
+.blogMainImg {
+  display: block;
+  width: 100%;
+  margin: 0 auto 35px;
+}

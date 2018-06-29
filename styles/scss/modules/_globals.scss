@@ -1,0 +1,139 @@
+/* Font Classes */
+// While loop that calculates font sizes
+$f: 12;
+@while $f <= 28 {
+  .font-#{$f} {
+    font-size: #{$f}px;
+  }
+  $f: $f + 2;
+}
+
+//position relative
+.relative {
+  position: relative;
+}
+//text aligne center
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+//Cursor pointer class
+.cursor-pointer {
+  cursor: pointer;
+}
+
+//margin and padding spaces
+$step: 0;
+@while $step <= 115 {
+  .mt-#{$step} {
+    margin-top: #{$step}px;
+  }
+  .mr-#{$step} {
+    margin-right: #{$step}px;
+  }
+  .mb-#{$step} {
+    margin-bottom: #{$step}px;
+  }
+  .ml-#{$step} {
+    margin-left: #{$step}px;
+  }
+  .m-#{$step} {
+    margin: #{$step}px;
+  }
+
+  .pt-#{$step} {
+    padding-top: #{$step}px;
+  }
+  .pr-#{$step} {
+    padding-right: #{$step}px;
+  }
+  .pb-#{$step} {
+    padding-bottom: #{$step}px;
+  }
+  .pl-#{$step} {
+    padding-left: #{$step}px;
+  }
+  .p-#{$step} {
+    padding: #{$step}px;
+  }
+  $step: $step + 5;
+}
+
+//floats
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+//alignes
+.align-baseline {
+  vertical-align: baseline;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
+.align-text-bottom {
+  vertical-align: text-bottom;
+}
+
+.align-text-top {
+  vertical-align: text-top;
+}
+
+//display
+.display-in-block {
+  display: inline-block;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-table {
+  display: table;
+}
+
+.display-table-cell {
+  display: table-cell;
+}
+
+// Global Centerer Class
+.centerer {
+  &-both {
+    @include centerer(true, true);
+  }
+
+  &-horizontal {
+    @include centerer(true, false);
+  }
+
+  &-vertical {
+    @include centerer(false, true);
+  }
+}
+
+// Background White
+
+.bg-white {
+  background: $white;
+}

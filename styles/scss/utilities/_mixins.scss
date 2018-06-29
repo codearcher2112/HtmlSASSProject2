@@ -1,0 +1,180 @@
+// FontFace
+@mixin font-face($font_name, $font_face_name, $font_style, $font_weight) {
+  $file_path: $fonts_folder +'/'+ $font_name;
+  @font-face {
+    font-family: $font_face_name;
+    font-style: $font_style;
+    font-weight: $font_weight;
+    src: url($file_path + ".eot");
+    src: url($file_path + ".eot?#iefix") format('embedded-opentype'), url($file_path + ".woff") format('woff'), url($file_path + ".ttf") format('truetype'), url($file_path + ".svg") format('svg');
+  }
+}
+
+// Clerfix After Mixins
+@mixin afterClearfix {
+  &::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+//Appearance
+@mixin appearance($appearance) {
+  -webkit-appearance: $appearance; /* Safari and Chrome */
+  -moz-appearance: $appearance; /* Firefox */
+  appearance: $appearance;
+}
+
+// Global Flex Mixins
+@mixin displayFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@mixin justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin justify-start {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+@mixin justify-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+@mixin justify-space-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+@mixin justify-space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@mixin align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin align-flex-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@mixin align-flex-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+@mixin flexOrder($flex-order) {
+  -webkit-box-ordinal-group: $flex-order + 1;
+  -ms-flex-order: $flex-order;
+  order: $flex-order;
+}
+
+// Flex basis
+@mixin flex-basis($flex-basis) {
+  -ms-flex-preferred-size: $flex-basis;
+  flex-basis: $flex-basis;
+}
+
+// Placeholder Styles
+@mixin placeholder-styles($font_family: null, $color: null, $font_size: null, $font_weight: null, $font_style: null) {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: $font_family;
+    color: $color;
+    font-size: $font_size;
+    font-weight: $font_weight;
+    font-style: $font_style;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    font-family: $font_family;
+    color: $color;
+    font-size: $font_size;
+    font-weight: $font_weight;
+    font-style: $font_style;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    font-family: $font_family;
+    color: $color;
+    font-size: $font_size;
+    font-weight: $font_weight;
+    font-style: $font_style;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    font-family: $font_family;
+    color: $color;
+    font-size: $font_size;
+    font-weight: $font_weight;
+    font-style: $font_style;
+  }
+}
+
+//Background Image
+@mixin bg-img($img: null, $bg_color: null, $repeat: null, $position: null, $bg_size: null, $bg_attachment: null) {
+  background: $bg_color url($images_folder + $img) $repeat $position;
+  background-size: $bg_size;
+  background-attachment: $bg_attachment;
+}
+
+// Position absolute
+@mixin pos-abs($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// Transition
+@mixin transition($trns-duration) {
+  -webkit-transition: $trns-duration all ease-in-out;
+  -moz-transition: $trns-duration all ease-in-out;
+  -o-transition: $trns-duration all ease-in-out;
+  transition: $trns-duration all ease-in-out;
+}
+
+//Border Radius
+@mixin radius($borderRadius...) {
+  border-radius: #{$borderRadius};
+}
+
+// Box Shadow
+@mixin boxShadow($shadows...) {
+  box-shadow: #{$shadows};
+}
+
+// will center absolute positioned child both horizontally and vertically inside parent
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}

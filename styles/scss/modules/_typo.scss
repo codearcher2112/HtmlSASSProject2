@@ -1,0 +1,28 @@
+h1 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  line-height: 1.2;
+  font-family: $Font-Otama;
+  font-size: 36px;
+}
+
+h2 {
+  font-family: $Font-Bold;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: $Font-Bold;
+  font-size: 18px;
+}
+
+h4 {
+  font-family: $Font-SemiBold;
+  font-size: 16px;
+  color: $white;
+}
+
+.asideSecHeading {
+  padding: 15px 20px;
+  background: $project-main;
+}

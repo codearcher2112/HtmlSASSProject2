@@ -1,0 +1,46 @@
+// Header Responsive
+@media only screen and (max-width: $screen-1170) {
+  .headerMain {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: $screen-md) {
+  nav {
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-sm) {
+  header {
+    .burgerMenuHolder, .registration, .logoHolder {
+      flex-basis: 100%;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .logoHolder {
+      order: -1;
+    }
+    .burgerMenuHolder {
+      order: 1;
+    }
+    div[class^="text-right"] {
+      text-align: center;
+    }
+  }
+
+  nav {
+    padding: 10px 0;
+    li {
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-xs) {
+
+}

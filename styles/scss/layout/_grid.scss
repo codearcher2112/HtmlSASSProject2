@@ -1,0 +1,37 @@
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Global Flex */
+.flex {
+  @include displayFlex;
+}
+
+.wrap {
+  @include wrap;
+}
+
+.justify {
+    &-center { @include justify-center; }
+    &-start { @include justify-start; }
+    &-end { @include justify-end; }
+    &-space-around { @include justify-space-around; }
+    &-space-between { @include justify-space-between; }
+}
+
+.align {
+    &-center { @include align-center; }
+    &-flex-start { @include align-flex-start; }
+    &-flex-end { @include align-flex-end; }
+}
